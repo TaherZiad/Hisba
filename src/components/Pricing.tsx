@@ -94,7 +94,7 @@ export function Pricing() {
             <h3 style={{ margin: '0 0 6px', fontSize: 22, fontWeight: 700, color: '#fff' }}>رخصة دائمة</h3>
             <p style={{ margin: '0 0 22px', fontSize: 15, color: '#9BC0DC' }}>ملكية كاملة، بلا اشتراك</p>
             <div style={{ display: 'flex', alignItems: 'baseline', gap: 8, marginBottom: 6, flexWrap: 'wrap' }}>
-              <span style={{ fontSize: 42, fontWeight: 700, color: '#fff', direction: 'ltr' }}>125,000</span>
+              <span style={{ fontSize: 42, fontWeight: 700, color: '#fff', direction: 'ltr' }}>150,000</span>
               <span style={{ fontSize: 17, color: '#9BC0DC' }}>د.ع</span>
             </div>
             <p style={{ margin: '0 0 24px', fontSize: 15, color: '#C77A12', fontWeight: 700 }}>

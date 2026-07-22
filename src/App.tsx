@@ -12,6 +12,7 @@ import { Hardware } from './components/Hardware'
 import { HowItWorks } from './components/HowItWorks'
 import { Screenshots } from './components/Screenshots'
 import { Pricing } from './components/Pricing'
+import { InstallVideo } from './components/InstallVideo'
 import { Download } from './components/Download'
 import { Faq } from './components/Faq'
 import { FinalCTA } from './components/FinalCTA'
@@ -77,6 +78,7 @@ export default function App() {
         <HowItWorks />
         <Screenshots />
         <Pricing />
+        <InstallVideo />
         <Download />
         <Faq />
         <FinalCTA />

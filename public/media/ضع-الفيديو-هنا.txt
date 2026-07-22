@@ -1,0 +1,15 @@
+ضع فيديو شرح التحميل والتثبيت هنا باسم:  install-guide.mp4
+
+أي: public/media/install-guide.mp4
+
+الصيغة الأفضل: MP4 (H.264 / AAC) — يشتغل على كل المتصفحات.
+بمجرد وضع الملف وإعادة البناء/النشر، يظهر الفيديو بقسم "شلون تحمّل وتثبّت التطبيق؟" قبل قسم التحميل.
+
+لتغيير الفيديو لاحقاً: استبدل هذا الملف بنفس الاسم، ثم أعد البناء والنشر.
+(لتغيير الاسم/المسار: عدّل INSTALL_VIDEO_URL في src/lib/motion.ts)
+
+ملاحظة: الفيديو ما يشتغل تلقائياً — المستخدم يضغط زر التشغيل. والجودة حسب ملفك الأصلي.
+
+---
+Put the install tutorial video here as:  install-guide.mp4  (MP4 / H.264).
+It appears in the "how to install" section above the download. To update, replace this file.
