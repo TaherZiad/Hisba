@@ -1,0 +1,276 @@
+/* ============================================================
+   حِسبة (Hisba) — global styles
+   Tokens, resets, keyframes, and CSS-only hover states that are
+   not driven by Framer Motion (text links, native selection).
+   ============================================================ */
+
+:root {
+  /* Brand */
+  --navy: #1f4e79;
+  --navy-deep: #143650;
+  --navy-hover: #1a4569;
+  --footer-logo-stop: #4c93c9;
+
+  /* Text */
+  --ink: #1a2130;
+  --body: #59616f;
+  --body-2: #3f4855;
+  --muted: #8a93a1;
+  --muted-dark: #9ba7b5;
+  --muted-dark-2: #6c7887;
+  --on-dark: #eaf1f7;
+  --on-dark-blue: #9bc0dc;
+
+  /* Accents */
+  --orange: #c77a12;
+  --orange-hover: #b06d0f;
+  --green: #1c8a5a;
+  --green-bg: #e8f5ee;
+  --wa: #25d366;
+  --wa-hover: #20bd5a;
+  --red: #c43b2e;
+  --red-bg: #fbe9e7;
+
+  /* Surfaces */
+  --page: #f1f4f8;
+  --surface: #ffffff;
+  --tint: #eaf1f7;
+  --tint-2: #d6e3ef;
+
+  /* Borders */
+  --border: #e2e6ec;
+  --border-2: #d6e3ef;
+  --border-btn: #cfd6df;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 96px;
+}
+
+body {
+  margin: 0;
+  background: var(--page);
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
+  color: var(--ink);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+a {
+  color: var(--navy);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--navy-hover);
+}
+
+::selection {
+  background: var(--tint-2);
+}
+
+/* Nav + footer text links (not motion-driven) */
+.nav-link {
+  color: var(--body) !important;
+  transition: color 0.2s ease;
+}
+.nav-link:hover {
+  color: var(--navy) !important;
+}
+.footer-link {
+  color: var(--muted-dark) !important;
+  transition: color 0.2s ease;
+}
+.footer-link:hover {
+  color: #fff !important;
+}
+
+/* Product screenshots fill their frame */
+.shot-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Clickable zoom frame — fills a positioned, overflow-hidden parent */
+.zoom-frame {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  overflow: hidden;
+  cursor: zoom-in;
+  display: block;
+}
+.zoom-frame .shot-img {
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.zoom-frame:hover .shot-img,
+.zoom-frame:focus-visible .shot-img {
+  transform: scale(1.05);
+}
+.zoom-hint {
+  position: absolute;
+  top: 10px;
+  inset-inline-start: 10px;
+  width: 34px;
+  height: 34px;
+  border-radius: 9px;
+  background: rgba(20, 54, 80, 0.72);
+  backdrop-filter: blur(2px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: translateY(-4px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  pointer-events: none;
+}
+.zoom-frame:hover .zoom-hint,
+.zoom-frame:focus-visible .zoom-hint {
+  opacity: 1;
+  transform: translateY(0);
+}
+@media (prefers-reduced-motion: reduce) {
+  .zoom-frame:hover .shot-img,
+  .zoom-frame:focus-visible .shot-img {
+    transform: none;
+  }
+}
+
+/* Hero float — kept as CSS so it composes with Framer's scroll parallax
+   on a separate wrapper. Disabled under reduced-motion below. */
+@keyframes heroFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-14px);
+  }
+}
+.hero-float {
+  animation: heroFloat 6s ease-in-out infinite;
+}
+
+/* Floating WhatsApp pulsing ring */
+@keyframes waRing {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.45);
+  }
+  70% {
+    box-shadow: 0 0 0 18px rgba(37, 211, 102, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
+.wa-ring {
+  animation: waRing 2.4s ease-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .hero-float {
+    animation: none;
+  }
+  .wa-ring {
+    animation: none;
+  }
+}
+
+/* ============================================================
+   Lenis smooth scroll (recommended base styles)
+   ============================================================ */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+/* ============================================================
+   Responsive — collapse multi-column grids down to mobile.
+   Layout values above are the desktop source-of-truth; these
+   only reflow at narrower widths.
+   ============================================================ */
+
+/* Tablet / small laptop */
+@media (max-width: 900px) {
+  .hero-grid {
+    grid-template-columns: 1fr !important;
+    gap: 40px !important;
+    padding-top: 56px !important;
+    padding-bottom: 64px !important;
+  }
+  .hero-grid h1 {
+    font-size: 40px !important;
+    letter-spacing: -0.5px !important;
+  }
+  .star-banner {
+    grid-template-columns: 1fr !important;
+    gap: 28px !important;
+    padding: 28px !important;
+  }
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .pricing-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .modes-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .shots-row1 {
+    grid-template-columns: 1fr !important;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 32px !important;
+  }
+  /* Hide center nav links on smaller screens (no room beside CTAs) */
+  .nav-center {
+    display: none !important;
+  }
+}
+
+/* Phones */
+@media (max-width: 560px) {
+  .grid-3 {
+    grid-template-columns: 1fr !important;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .hero-grid h1 {
+    font-size: 32px !important;
+  }
+  /* Down-scale big section headings so they don't overflow */
+  section h2,
+  header h2 {
+    font-size: 30px !important;
+  }
+  /* Trim the primary CTA labels’ padding on very small screens */
+  .nav-cta-label {
+    display: none;
+  }
+}

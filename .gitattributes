@@ -1,0 +1,9 @@
+# Normalize text files to LF; let git detect text vs binary
+* text=auto eol=lf
+
+# Binaries — never touch line endings
+*.exe binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.ico binary

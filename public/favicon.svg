@@ -1,0 +1,12 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="lg" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1F4E79"/>
+      <stop offset="100%" stop-color="#143650"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="143" fill="url(#lg)"/>
+  <text x="256" y="256" fill="#fff" font-family="'IBM Plex Sans Arabic',sans-serif" font-weight="700" font-size="287" text-anchor="middle" dominant-baseline="central">ح</text>
+  <circle cx="112" cy="400" r="66" fill="#fff"/>
+  <circle cx="112" cy="400" r="51" fill="#C77A12"/>
+</svg>
