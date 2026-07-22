@@ -3,6 +3,7 @@
 
 # Binaries — never touch line endings
 *.exe binary
+*.zip binary
 *.png binary
 *.jpg binary
 *.jpeg binary

@@ -9,8 +9,8 @@ export const PHONE = '+964 770 088 0078'
  * On a new release: drop the new file in public/downloads/ and bump the version
  * in these two lines to match its filename.
  */
-export const DOWNLOAD_URL = '/downloads/hisba-setup-1.6.0.exe'
-export const DOWNLOAD_FILENAME = 'Hisba-Setup-1.6.0.exe'
+export const DOWNLOAD_URL = '/downloads/Hisba-Setup-1.7.0.zip'
+export const DOWNLOAD_FILENAME = 'Hisba-Setup-1.7.0.zip'
 
 /** whileInView viewport config — reveal once, a touch before fully on-screen. */
 export const VIEWPORT = { once: true, margin: '0px 0px -40px 0px' } as const
