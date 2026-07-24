@@ -5,12 +5,19 @@ export const WA_LINK = 'https://wa.me/9647700880078'
 export const PHONE = '+964 770 088 0078'
 
 /**
- * Windows installer download (served directly from the site — no external host).
- * On a new release: drop the new file in public/downloads/ and bump the version
- * in these two lines to match its filename.
+ * Windows installer download — hosted on GitHub Releases (not on Vercel).
+ * This keeps the 37 MB binary out of the site's bandwidth and gives the file
+ * a better host reputation with browsers' Safe Browsing.
+ *
+ * On a new release:
+ *   1. Create a GitHub Release with a version tag (e.g. v1.7.17).
+ *   2. Attach the installer named exactly "Hisba-Setup.zip".
+ *   3. Bump the tag in DOWNLOAD_URL below to match the new release.
+ * URL shape: https://github.com/<user>/<repo>/releases/download/<tag>/<file>
  */
-export const DOWNLOAD_URL = '/downloads/Hisba-Setup-1.7.16.zip'
-export const DOWNLOAD_FILENAME = 'Hisba-Setup-1.7.16.zip'
+export const DOWNLOAD_URL =
+  'https://github.com/TaherZiad/Hisba-Landing-Page/releases/download/v1.7.17/Hisba-Setup.zip'
+export const DOWNLOAD_FILENAME = 'Hisba-Setup.zip'
 
 /**
  * Install / download tutorial video.
