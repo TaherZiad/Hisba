@@ -55,11 +55,19 @@ html {
 body {
   margin: 0;
   background: var(--page);
-  font-family: 'IBM Plex Sans Arabic', sans-serif;
+  font-family: 'Tajawal', 'Segoe UI', sans-serif;
   color: var(--ink);
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+}
+
+/* Display face carries the headings; body stays on the cleaner Tajawal.
+   Applied globally so every section heading picks it up without per-file edits. */
+h1,
+h2 {
+  font-family: 'Readex Pro', 'Tajawal', sans-serif;
+  letter-spacing: -0.5px;
 }
 
 a {
@@ -161,6 +169,12 @@ a:hover {
 }
 .hero-float {
   animation: heroFloat 6s ease-in-out infinite;
+}
+
+/* Intro mark in the hero — scales with the frame it flies into. */
+.hero-logo-3d svg {
+  width: 100%;
+  height: auto;
 }
 
 /* Floating WhatsApp pulsing ring */

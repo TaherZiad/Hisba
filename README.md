@@ -34,7 +34,7 @@ npm run preview
 ## Project structure
 
 ```
-index.html                     # RTL root, IBM Plex Sans Arabic font, meta
+index.html                     # RTL root, Readex Pro + Tajawal fonts, meta
 src/
   main.tsx                     # entry
   App.tsx                      # Lenis + smooth anchors + MotionConfig, section order

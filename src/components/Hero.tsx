@@ -1,7 +1,7 @@
 import type { CSSProperties } from 'react'
 import { motion, useScroll, useTransform, useReducedMotion } from 'motion/react'
 import { Check, DownloadIcon } from './icons'
-import { ZoomImage } from './Lightbox'
+import { HeroDashboard } from './HeroDashboard'
 import { EASE_OUT } from '../lib/motion'
 
 const loadContainer = {
@@ -32,12 +32,13 @@ export function Hero() {
       <div
         className="hero-grid"
         style={{
-          maxWidth: 1200,
+          maxWidth: 1280,
           margin: '0 auto',
           padding: '78px 24px 90px',
           display: 'grid',
-          gridTemplateColumns: '1.05fr 1fr',
-          gap: 56,
+          // The visual carries the intro animation, so it gets the wider column.
+          gridTemplateColumns: '1fr 1.2fr',
+          gap: 48,
           alignItems: 'center',
         }}
       >
@@ -158,27 +159,10 @@ export function Hero() {
           </motion.div>
         </motion.div>
 
-        {/* Right column — floating product card (CSS float + scroll parallax) */}
-        <motion.div
-          initial={{ opacity: 0, y: 26 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9, ease: EASE_OUT, delay: 0.25 }}
-          style={{ minWidth: 0, y: parallax }}
-        >
+        {/* Right column — 3D dashboard intro (owns its own entrance) + scroll parallax */}
+        <motion.div style={{ minWidth: 0, y: parallax }}>
           <div className="hero-float">
-            <div
-              style={{
-                background: '#fff',
-                border: '1px solid #E2E6EC',
-                borderRadius: 18,
-                padding: 10,
-                boxShadow: '0 40px 80px -32px rgba(20,54,80,.45)',
-              }}
-            >
-              <div style={{ aspectRatio: '1918 / 1009', borderRadius: 11, overflow: 'hidden', position: 'relative' }}>
-                <ZoomImage src="/assets/app-dashboard.png" alt="لوحة التحكم — نظرة عامة على أداء محلك" objectPosition="top" />
-              </div>
-            </div>
+            <HeroDashboard />
           </div>
         </motion.div>
       </div>

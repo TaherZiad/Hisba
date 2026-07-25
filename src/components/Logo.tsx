@@ -31,7 +31,7 @@ export function Logo({ size = 40, variant = 'nav' }: LogoProps) {
         x="256"
         y="256"
         fill="#fff"
-        fontFamily="'IBM Plex Sans Arabic',sans-serif"
+        fontFamily="'Readex Pro','Tajawal',sans-serif"
         fontWeight="700"
         fontSize="287"
         textAnchor="middle"
