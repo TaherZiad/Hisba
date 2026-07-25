@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useLayoutEffect, useRef, useState } from 'react'
 import { AnimatePresence, motion, useReducedMotion } from 'motion/react'
 import { Logo } from './Logo'
 import { ZoomImage } from './Lightbox'
@@ -89,9 +89,12 @@ export function HeroDashboard() {
    *  introduce containment, which collapses the 3D scene, so measure instead. */
   const [frameW, setFrameW] = useState(0)
 
-  useEffect(() => {
+  // Layout effect, not effect: the ident's mark and wordmark are sized from
+  // this, so measuring after the first paint would flash them at zero size.
+  useLayoutEffect(() => {
     const el = frameRef.current
     if (!el) return
+    setFrameW(el.getBoundingClientRect().width)
     const ro = new ResizeObserver(([e]) => setFrameW(e.contentRect.width))
     ro.observe(el)
     return () => ro.disconnect()
@@ -301,7 +304,9 @@ export function HeroDashboard() {
                 filter: 'drop-shadow(0 18px 30px rgba(0,0,0,.45))',
               }}
             >
-              <Logo size={256} />
+              {/* The footer gradient is the light-on-dark one — the nav variant
+                  would sink into this navy panel. */}
+              <Logo size={256} variant="footer" />
             </motion.div>
 
             <motion.div
