@@ -16,7 +16,7 @@ export const PHONE = '+964 770 088 0078'
  * URL shape: https://github.com/<user>/<repo>/releases/download/<tag>/<file>
  */
 export const DOWNLOAD_URL =
-  'https://github.com/TaherZiad/Hisba-Landing-Page/releases/download/v1.7.17/Hisba-Setup.zip'
+  'https://github.com/TaherZiad/Hisba/releases/download/v1.7.17/Hisba-Setup.zip'
 export const DOWNLOAD_FILENAME = 'Hisba-Setup.zip'
 
 /**
