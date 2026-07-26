@@ -3,8 +3,7 @@
 A lively, motion-rich, **RTL Arabic** marketing landing page for **حِسبة** — an Iraqi
 POS + inventory + debts + guarantor-installments desktop app for Windows.
 
-Built as a faithful, high-fidelity recreation of the design handoff
-(`design_handoff_hisba_website/`) on a real animation stack.
+Live at **https://hisba-iq.vercel.app**
 
 ## Stack
 
@@ -48,30 +47,27 @@ src/
     Features.tsx  Hardware.tsx  HowItWorks.tsx  Screenshots.tsx  Pricing.tsx
     Download.tsx  Faq.tsx  FinalCTA.tsx  Footer.tsx  FloatingWhatsApp.tsx
 public/
-  assets/                      # placeholder screenshot SVGs (see below)
-  favicon.svg
+  assets/                      # real in-app screenshots (see below)
+  media/install-guide.mp4      # install tutorial shown in the how-to-install section
+  favicon.svg  robots.txt  sitemap.xml
 ```
 
 ## Where to drop the real content
 
 ### 1. تحميل التطبيق (المثبّت) — Download / installer
 
-The site hosts the installer itself, so the "حمّل التطبيق الآن" button downloads it
-**immediately** (no external host needed).
+The installer is hosted on **GitHub Releases**, not in this repo — that keeps a
+~35 MB binary out of the tree and gives the download a better host reputation
+with browsers' Safe Browsing. The "حمّل التطبيق الآن" button links straight at
+the release asset, so it still downloads immediately.
 
-**To add / update the installer:**
-1. Put your Windows installer file here, named exactly **`hisba-setup.exe`**:
-   ```
-   public/downloads/hisba-setup.exe
-   ```
-   (To use a different name, change `DOWNLOAD_URL` / `DOWNLOAD_FILENAME` in
-   `src/lib/motion.ts` to match.)
-2. Rebuild & redeploy (`npm run build`, then publish `dist/` — see Deploy below).
-   In local dev the button works as soon as the file is in place.
+**To ship a new version:**
+1. Create a GitHub Release with a version tag (e.g. `v1.7.17`).
+2. Attach the installer, named exactly **`Hisba-Setup.zip`**.
+3. Bump the tag in `DOWNLOAD_URL` in `src/lib/motion.ts` to match, then redeploy.
 
-**To push an update later:** just replace `public/downloads/hisba-setup.exe` with the
-new version (same filename) and redeploy. Users always get the latest file from the
-same button. Nothing else to change.
+The URL shape is
+`https://github.com/<user>/<repo>/releases/download/<tag>/Hisba-Setup.zip`.
 
 > The download button is in the Download section. The navbar / hero "حمّل التطبيق"
 > buttons smooth-scroll to that section (`#download`), where the real download button lives.
@@ -127,3 +123,13 @@ npm run build      # outputs dist/
 
 Serve the `dist/` folder. For Vercel/Netlify the defaults (build command
 `npm run build`, output `dist`) are auto-detected for Vite.
+
+## License
+
+Copyright (c) 2026 Taher Ziad. **All rights reserved** — see [LICENSE](LICENSE).
+
+The source is published for transparency and reference only; it is not
+open-source. Reading and short attributed quotes are fine. Copying,
+redeploying, or building a derivative of this site requires written
+permission. The name حِسبة / Hisba, the logo, and the app screenshots are not
+covered by any grant.

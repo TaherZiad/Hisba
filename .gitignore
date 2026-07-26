@@ -27,6 +27,9 @@ secrets.json
 public/downloads/*.zip
 public/downloads/*.exe
 
+# Private design handoff — kept locally, never published
+design_handoff_hisba_website/
+
 # Editor
 .vscode/*
 !.vscode/extensions.json
