@@ -91,8 +91,8 @@ Frames use `aspect-ratio` matched to the screenshots (~1.9:1) with `object-fit: 
 so they sit flush and consistent; the lightbox shows each image in full.
 
 ### 3. Contact details (already wired)
-- WhatsApp everywhere → `https://wa.me/9647700880078` (new tab, `rel="noopener"`).
-- Footer phone → `+964 770 088 0078`.
+- WhatsApp everywhere → `https://wa.me/9647744553360` (new tab, `rel="noopener"`).
+- Footer phone → `+964 774 455 3360`.
 
 Both live in `src/lib/motion.ts` (`WA_LINK`, `PHONE`). Contact + purchase copy now
 references **WhatsApp only** (payment: cash or ZainCash). If you add TikTok/Instagram

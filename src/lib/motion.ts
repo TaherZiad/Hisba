@@ -1,8 +1,8 @@
 import type { Variants } from 'motion/react'
 
 /** Global constants */
-export const WA_LINK = 'https://wa.me/9647700880078'
-export const PHONE = '+964 770 088 0078'
+export const WA_LINK = 'https://wa.me/9647744553360'
+export const PHONE = '+964 774 455 3360'
 
 /**
  * Windows installer download — hosted on GitHub Releases (not on Vercel).

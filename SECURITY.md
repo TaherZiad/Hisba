@@ -27,5 +27,5 @@ server-side only. Never embed a secret in client code — anything shipped to th
 is public. Update the CSP `connect-src` to allow your API origin.
 
 ## Reporting a vulnerability
-Please report privately via WhatsApp: https://wa.me/9647700880078 — do not open a public
+Please report privately via WhatsApp: https://wa.me/9647744553360 — do not open a public
 issue for security matters.

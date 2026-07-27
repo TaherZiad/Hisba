@@ -87,7 +87,7 @@ export function FinalCTA() {
               <span>
                 واتساب:{' '}
                 <span dir="ltr" style={{ unicodeBidi: 'isolate' }}>
-                  0770 088 0078
+                  0774 455 3360
                 </span>
               </span>
             </motion.a>
