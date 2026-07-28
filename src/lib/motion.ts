@@ -16,12 +16,12 @@ export const PHONE = '+964 774 455 3360'
  * URL shape: https://github.com/<user>/<repo>/releases/download/<tag>/<file>
  */
 export const DOWNLOAD_URL =
-  'https://github.com/TaherZiad/Hisba/releases/download/v1.8.4/Hisba-Setup.zip'
+  'https://github.com/TaherZiad/Hisba/releases/download/v1.9.0/Hisba-Setup.zip'
 export const DOWNLOAD_FILENAME = 'Hisba-Setup.zip'
 
 /** Android build (APK, zipped). Attached to the same release as the Windows one. */
 export const ANDROID_DOWNLOAD_URL =
-  'https://github.com/TaherZiad/Hisba/releases/download/v1.8.4/Hisba-Setup-for-android.zip'
+  'https://github.com/TaherZiad/Hisba/releases/download/v1.9.0/Hisba-Setup-for-android.zip'
 export const ANDROID_DOWNLOAD_FILENAME = 'Hisba-Setup-for-android.zip'
 
 /**
