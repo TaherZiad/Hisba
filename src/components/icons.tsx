@@ -21,6 +21,31 @@ export function WindowsGlyph({ size = 24, style }: IconProps) {
   )
 }
 
+export function AndroidGlyph({ size = 24, style }: IconProps) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="#fff" style={style}>
+      {/* antennae */}
+      <path
+        d="M7.2 5.1L6.1 3.4M16.8 5.1l1.1-1.7"
+        stroke="#fff"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        fill="none"
+      />
+      {/* head */}
+      <path d="M4.6 10.2a7.4 7.4 0 0 1 14.8 0H4.6z" />
+      <circle cx="9" cy="7.9" r=".95" fill="#1F4E79" />
+      <circle cx="15" cy="7.9" r=".95" fill="#1F4E79" />
+      {/* body + arms + legs */}
+      <rect x="4.6" y="11.4" width="14.8" height="7.6" rx="1.7" />
+      <rect x="1.2" y="11.2" width="2.4" height="6.4" rx="1.2" />
+      <rect x="20.4" y="11.2" width="2.4" height="6.4" rx="1.2" />
+      <rect x="7.6" y="18.4" width="2.4" height="4.2" rx="1.2" />
+      <rect x="14" y="18.4" width="2.4" height="4.2" rx="1.2" />
+    </svg>
+  )
+}
+
 /* ---- Stroke icons ---- */
 
 export function DownloadIcon({ size = 17, style, stroke = '#fff', strokeWidth = 2.2 }: IconProps & { stroke?: string; strokeWidth?: number }) {

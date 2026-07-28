@@ -56,18 +56,23 @@ public/
 
 ### 1. تحميل التطبيق (المثبّت) — Download / installer
 
-The installer is hosted on **GitHub Releases**, not in this repo — that keeps a
-~35 MB binary out of the tree and gives the download a better host reputation
-with browsers' Safe Browsing. The "حمّل التطبيق الآن" button links straight at
-the release asset, so it still downloads immediately.
+Both builds are hosted on **GitHub Releases**, not in this repo — that keeps the
+binaries out of the tree and gives the downloads a better host reputation with
+browsers' Safe Browsing. The Download section links straight at the release
+assets, so each button downloads immediately.
 
 **To ship a new version:**
-1. Create a GitHub Release with a version tag (e.g. `v1.7.17`).
-2. Attach the installer, named exactly **`Hisba-Setup.zip`**.
-3. Bump the tag in `DOWNLOAD_URL` in `src/lib/motion.ts` to match, then redeploy.
+1. Create a GitHub Release with a version tag (e.g. `v1.8.4`).
+2. Attach both builds, named exactly:
+   - **`Hisba-Setup.zip`** — the Windows installer
+   - **`Hisba-Setup-for-android.zip`** — the Android APK
+3. Bump the tag in `DOWNLOAD_URL` and `ANDROID_DOWNLOAD_URL` in
+   `src/lib/motion.ts` to match, then redeploy.
 
 The URL shape is
-`https://github.com/<user>/<repo>/releases/download/<tag>/Hisba-Setup.zip`.
+`https://github.com/<user>/<repo>/releases/download/<tag>/<asset>`.
+
+Keep both platforms on one tag so the release history stays readable.
 
 > The download button is in the Download section. The navbar / hero "حمّل التطبيق"
 > buttons smooth-scroll to that section (`#download`), where the real download button lives.

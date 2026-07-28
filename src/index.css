@@ -257,6 +257,11 @@ html.lenis body {
   .shots-row1 {
     grid-template-columns: 1fr !important;
   }
+  /* Phone shots stay side-by-side but shrink — three portraits still read. */
+  .phone-row {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 12px !important;
+  }
   .footer-grid {
     grid-template-columns: 1fr 1fr !important;
     gap: 32px !important;

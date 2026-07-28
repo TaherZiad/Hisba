@@ -1,7 +1,12 @@
 import { motion } from 'motion/react'
 import { Reveal } from './Motion'
-import { DownloadIcon, WindowsGlyph } from './icons'
-import { DOWNLOAD_URL, DOWNLOAD_FILENAME } from '../lib/motion'
+import { DownloadIcon, WindowsGlyph, AndroidGlyph } from './icons'
+import {
+  DOWNLOAD_URL,
+  DOWNLOAD_FILENAME,
+  ANDROID_DOWNLOAD_URL,
+  ANDROID_DOWNLOAD_FILENAME,
+} from '../lib/motion'
 
 export function Download() {
   return (
@@ -30,33 +35,63 @@ export function Download() {
           <DownloadIcon size={30} />
         </div>
         <h2 style={{ margin: '0 0 12px', fontSize: 36, fontWeight: 700, color: '#143650', letterSpacing: '-.5px' }}>
-          حمّل حِسبة لويندوز
+          حمّل حِسبة
         </h2>
         <p style={{ margin: '0 0 28px', fontSize: 18, color: '#59616F' }}>
-          ابدأ خلال دقائق — نظام محلك كامل على حاسوبك.
+          ابدأ خلال دقائق — على حاسوبك أو على هاتفك.
         </p>
-        {/* Downloads the installer from /public/downloads/. See README → "تحميل التطبيق". */}
-        <motion.a
-          href={DOWNLOAD_URL}
-          download={DOWNLOAD_FILENAME}
-          whileHover={{ scale: 1.03, backgroundColor: '#1A4569' }}
-          whileTap={{ scale: 0.97 }}
+        {/* Both builds are attached to the same GitHub Release — see README. */}
+        <div
           style={{
-            display: 'inline-flex',
-            alignItems: 'center',
-            gap: 11,
-            background: '#1F4E79',
-            color: '#fff',
-            padding: '18px 40px',
-            borderRadius: 12,
-            fontWeight: 700,
-            fontSize: 20,
-            boxShadow: '0 14px 30px -10px rgba(31,78,121,.6)',
+            display: 'flex',
+            flexWrap: 'wrap',
+            justifyContent: 'center',
+            gap: 14,
           }}
         >
-          <WindowsGlyph size={24} />
-          حمّل التطبيق الآن
-        </motion.a>
+          <motion.a
+            href={DOWNLOAD_URL}
+            download={DOWNLOAD_FILENAME}
+            whileHover={{ scale: 1.03, backgroundColor: '#1A4569' }}
+            whileTap={{ scale: 0.97 }}
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: 11,
+              background: '#1F4E79',
+              color: '#fff',
+              padding: '18px 36px',
+              borderRadius: 12,
+              fontWeight: 700,
+              fontSize: 19,
+              boxShadow: '0 14px 30px -10px rgba(31,78,121,.6)',
+            }}
+          >
+            <WindowsGlyph size={23} />
+            حمّل لويندوز
+          </motion.a>
+          <motion.a
+            href={ANDROID_DOWNLOAD_URL}
+            download={ANDROID_DOWNLOAD_FILENAME}
+            whileHover={{ scale: 1.03, backgroundColor: '#177449' }}
+            whileTap={{ scale: 0.97 }}
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: 11,
+              background: '#1C8A5A',
+              color: '#fff',
+              padding: '18px 36px',
+              borderRadius: 12,
+              fontWeight: 700,
+              fontSize: 19,
+              boxShadow: '0 14px 30px -10px rgba(28,138,90,.55)',
+            }}
+          >
+            <AndroidGlyph size={23} />
+            حمّل لأندرويد (APK)
+          </motion.a>
+        </div>
       </Reveal>
     </section>
   )
