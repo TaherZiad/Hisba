@@ -92,6 +92,12 @@ export function Download() {
             حمّل لأندرويد (APK)
           </motion.a>
         </div>
+        {/* Sideloading always prompts; say so plainly instead of letting it
+            surprise anyone mid-install. */}
+        <p style={{ margin: '20px 0 0', fontSize: 14.5, color: '#8A93A1', lineHeight: 1.7 }}>
+          على الأندرويد: بعد التحميل افتح الملف وثبّته مباشرة — الهاتف راح يسألك تسمح
+          بالتثبيت من هذا المصدر لأن التطبيق مو من متجر Play. التطبيق آمن ١٠٠٪.
+        </p>
       </Reveal>
     </section>
   )

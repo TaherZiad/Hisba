@@ -65,7 +65,8 @@ assets, so each button downloads immediately.
 1. Create a GitHub Release with a version tag (e.g. `v1.8.4`).
 2. Attach both builds, named exactly:
    - **`Hisba-Setup.zip`** — the Windows installer
-   - **`Hisba-Setup-for-android.zip`** — the Android APK
+   - **`Hisba.apk`** — the Android build, unzipped. Phones rarely have an
+     archive extractor, so a zip strands anyone installing from the device.
 3. Bump the tag in `DOWNLOAD_URL` and `ANDROID_DOWNLOAD_URL` in
    `src/lib/motion.ts` to match, then redeploy.
 

@@ -16,13 +16,17 @@ export const PHONE = '+964 774 455 3360'
  * URL shape: https://github.com/<user>/<repo>/releases/download/<tag>/<file>
  */
 export const DOWNLOAD_URL =
-  'https://github.com/TaherZiad/Hisba/releases/download/v1.9.0/Hisba-Setup.zip'
+  'https://github.com/TaherZiad/Hisba/releases/download/v1.14.1/Hisba-Setup.zip'
 export const DOWNLOAD_FILENAME = 'Hisba-Setup.zip'
 
-/** Android build (APK, zipped). Attached to the same release as the Windows one. */
+/**
+ * Android build — the raw APK, not a zip. Phones rarely ship with an archive
+ * extractor, so zipping it strands anyone installing straight from the device.
+ * Attached to the same release as the Windows installer.
+ */
 export const ANDROID_DOWNLOAD_URL =
-  'https://github.com/TaherZiad/Hisba/releases/download/v1.9.0/Hisba-Setup-for-android.zip'
-export const ANDROID_DOWNLOAD_FILENAME = 'Hisba-Setup-for-android.zip'
+  'https://github.com/TaherZiad/Hisba/releases/download/v1.14.1/Hisba.apk'
+export const ANDROID_DOWNLOAD_FILENAME = 'Hisba.apk'
 
 /**
  * Install / download tutorial video.
