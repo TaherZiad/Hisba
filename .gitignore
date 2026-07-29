@@ -26,6 +26,7 @@ secrets.json
 # Installer binaries are hosted on GitHub Releases, not in the repo
 public/downloads/*.zip
 public/downloads/*.exe
+public/downloads/*.apk
 
 # Private design handoff — kept locally, never published
 design_handoff_hisba_website/
