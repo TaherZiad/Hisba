@@ -96,6 +96,19 @@ export function Pricing() {
             <div style={{ display: 'flex', alignItems: 'baseline', gap: 8, marginBottom: 6, flexWrap: 'wrap' }}>
               <span style={{ fontSize: 42, fontWeight: 700, color: '#fff', direction: 'ltr' }}>150,000</span>
               <span style={{ fontSize: 17, color: '#9BC0DC' }}>د.ع</span>
+              {/* Old price, struck through, so the drop reads at a glance. */}
+              <s
+                style={{
+                  marginInlineStart: 6,
+                  fontSize: 24,
+                  fontWeight: 600,
+                  color: '#7FA3C2',
+                  direction: 'ltr',
+                  textDecorationThickness: 2,
+                }}
+              >
+                200,000
+              </s>
             </div>
             <p style={{ margin: '0 0 24px', fontSize: 15, color: '#C77A12', fontWeight: 700 }}>
               دفعة وحدة — رخصة مدى الحياة، بلا اشتراك شهري
