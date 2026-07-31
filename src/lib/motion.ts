@@ -16,7 +16,7 @@ export const PHONE = '+964 774 455 3360'
  * URL shape: https://github.com/<user>/<repo>/releases/download/<tag>/<file>
  */
 export const DOWNLOAD_URL =
-  'https://github.com/TaherZiad/Hisba/releases/download/v1.18.0/Hisba-Setup.zip'
+  'https://github.com/TaherZiad/Hisba/releases/download/v1.17.0/Hisba-Setup.zip'
 export const DOWNLOAD_FILENAME = 'Hisba-Setup.zip'
 
 /**
@@ -25,7 +25,7 @@ export const DOWNLOAD_FILENAME = 'Hisba-Setup.zip'
  * Attached to the same release as the Windows installer.
  */
 export const ANDROID_DOWNLOAD_URL =
-  'https://github.com/TaherZiad/Hisba/releases/download/v1.18.0/Hisba.apk'
+  'https://github.com/TaherZiad/Hisba/releases/download/v1.17.0/Hisba.apk'
 export const ANDROID_DOWNLOAD_FILENAME = 'Hisba.apk'
 
 /**
