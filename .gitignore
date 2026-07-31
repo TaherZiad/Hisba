@@ -23,10 +23,10 @@ secrets.json
 *.tsbuildinfo
 .vercel
 
-# Installer binaries are hosted on GitHub Releases, not in the repo
-public/downloads/*.zip
-public/downloads/*.exe
-public/downloads/*.apk
+# Installer binaries are hosted on GitHub Releases, not in the repo.
+# Ignore the whole tree, not just its top level: an unzipped installer lands in
+# a subfolder, and `public/downloads/*.exe` does not match across a `/`.
+public/downloads/
 
 # Private design handoff — kept locally, never published
 design_handoff_hisba_website/
